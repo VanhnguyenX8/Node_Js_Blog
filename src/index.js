@@ -6,6 +6,8 @@ const app = express();
 const port = 3000;
 // http longer
 app.use(morgan('combined'))
+
+app.use(express.static(path.join(__dirname, 'public')));
 // Template engine
 // định nghĩa 'handlebar' handlebar
 app.engine('handlebars',handlebars.engine())
